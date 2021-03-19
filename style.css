@@ -10,7 +10,10 @@ html {
   font-size: 62.5%; }
 
 body {
+  background: #ff9c78;
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center; }
 
 h1 {
