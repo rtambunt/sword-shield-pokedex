@@ -22,7 +22,11 @@ const createPokemonCard = function (pokemon) {
   const pokemonEl = document.createElement(`div`);
   pokemonEl.classList.add(`pokemon`);
 
-  const pokeInnerHTML = `${pokemon.entry_number}. ${pokemon.pokemon_species.name}`;
+  const pokemonName =
+    pokemon.pokemon_species.name[0].toUpperCase() +
+    pokemon.pokemon_species.name.slice(1);
+
+  const pokeInnerHTML = `${pokemon.entry_number}. ${pokemonName}`;
 
   pokemonEl.innerHTML = pokeInnerHTML;
   pokeContainer.appendChild(pokemonEl);
