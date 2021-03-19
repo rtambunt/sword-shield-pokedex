@@ -1,0 +1,26 @@
+{
+  "name": "sword-shield-pokedex",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "devserver": "live-server",
+    "watch:sass": "node-sass sass/main.scss style.css -w",
+    "start": "npm-run-all --parallel devserver watch:sass"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rtambunt/sword-shield-pokedex.git"
+  },
+  "author": "Robbie Tambunting",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rtambunt/sword-shield-pokedex/issues"
+  },
+  "homepage": "https://github.com/rtambunt/sword-shield-pokedex#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "node-sass": "^5.0.0",
+    "npm-run-all": "^4.1.5"
+  }
+}
