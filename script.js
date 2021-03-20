@@ -9,20 +9,12 @@ const getPokemon = async id => {
   const pokedex = await response.json(); // produces js object from json file
   const pokeEntry = pokedex.pokemon_entries[id]; // pokemon.pokemon_entries[i] = desired pokemon (sword and shield exclusive pokemon)
   const pokeSpecies = pokeEntry.pokemon_species;
-  // let pokeName = pokeSpecies.name;
 
-  // if (pokeName === 'zacian' || pokeName === 'zamazenta') {
-  //   pokeName = pokeName + '-hero';
-  // }
-
-  // const pokeUrl = `https://pokeapi.co/api/v2/pokemon/${pokeName}`;
   const pokeUrl = pokeSpecies.url.replace('-species', '').slice(0, -1);
-  console.log(pokeUrl);
   const pokeResponse = await fetch(pokeUrl);
   const pokeInfo = await pokeResponse.json(); // Accesses info for one pokemon
-  const pokeSprite = pokeInfo.sprites;
 
-  createPokemonCard(pokeSpecies);
+  createPokemonCard(pokeInfo);
 };
 
 const fetchPokemon = async () => {
@@ -32,15 +24,15 @@ const fetchPokemon = async () => {
 };
 fetchPokemon();
 
-const createPokemonCard = function (pokeSpecies) {
+const createPokemonCard = function (pokeInfo) {
   const pokemonEl = document.createElement(`div`);
   pokemonEl.classList.add(`pokemon`);
 
-  const pokeName =
-    pokeSpecies.name[0].toUpperCase() + pokeSpecies.name.slice(1);
+  const pokeName = pokeInfo.name[0].toUpperCase() + pokeInfo.name.slice(1);
+  const pokeSprite = pokeInfo.sprites.front_default;
 
   const pokeInnerHTML = `<div class="img-container">
-  <img src="">
+  <img src="${pokeSprite}">
   </div>${pokeName}`;
 
   pokemonEl.innerHTML = pokeInnerHTML;
