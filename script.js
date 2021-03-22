@@ -9,12 +9,13 @@ const getPokemon = async id => {
   const pokedex = await response.json(); // produces js object from json file
   const pokeEntry = pokedex.pokemon_entries[id]; // pokemon.pokemon_entries[i] = desired pokemon (sword and shield exclusive pokemon)
   const pokeSpecies = pokeEntry.pokemon_species;
+  const entryNum = pokeEntry.entry_number;
 
-  const pokeUrl = pokeSpecies.url.replace('-species', '').slice(0, -1);
+  const pokeUrl = pokeSpecies.url.replace('-species', '').slice(0, -1) + '/';
   const pokeResponse = await fetch(pokeUrl);
   const pokeInfo = await pokeResponse.json(); // Accesses info for one pokemon
 
-  createPokemonCard(pokeInfo);
+  createPokemonCard(entryNum, pokeInfo);
 };
 
 const fetchPokemon = async () => {
@@ -24,7 +25,7 @@ const fetchPokemon = async () => {
 };
 fetchPokemon();
 
-const createPokemonCard = function (pokeInfo) {
+const createPokemonCard = function (entryNum, pokeInfo) {
   const pokemonEl = document.createElement(`div`);
   pokemonEl.classList.add(`pokemon`);
 
@@ -33,7 +34,7 @@ const createPokemonCard = function (pokeInfo) {
 
   const pokeInnerHTML = `<div class="img-container">
   <img src="${pokeSprite}">
-  </div>${pokeName}`;
+  </div> ${entryNum} ${pokeName}`;
 
   pokemonEl.innerHTML = pokeInnerHTML;
   pokeContainer.appendChild(pokemonEl);
