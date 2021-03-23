@@ -1,0 +1,34 @@
+.poke-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 1200px;
+
+  .pokemon {
+    background-color: #eee;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    text-align: center;
+    padding: 2rem 1rem;
+
+    &__img-container {
+      background-color: rgba($color: white, $alpha: 0.6);
+      margin-top: 2rem;
+      height: 12rem;
+      width: 12rem;
+      border-radius: 50%;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -ms-border-radius: 50%;
+      -o-border-radius: 50%;
+
+      a {
+        max-width: 90%;
+      }
+    }
+  }
+}
