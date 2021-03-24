@@ -37,7 +37,7 @@ const createPokemonCard = function (entryNum, pokeInfo) {
       <img src="${pokeSprite}"/> 
     </div> 
     <div class="info">
-      <span class="info__number">No. ${entryNum}</span> 
+      <span class="info__number">No. ${String(entryNum).padStart(3, 0)}</span> 
       <h2 class="info__pokeName">${pokeName}<h2> 
     </div>`;
 
