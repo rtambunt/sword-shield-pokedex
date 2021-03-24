@@ -11,7 +11,8 @@ html {
 
 body {
   background: #ff9c78;
-  text-align: center; }
+  text-align: center;
+  font-family: 'Nunito', Arial, Helvetica, sans-serif; }
 
 h1 {
   letter-spacing: 1px; }
@@ -57,5 +58,4 @@ h1 {
       -ms-border-radius: 1rem;
       -o-border-radius: 1rem; }
     .poke-container .info__pokeName {
-      margin: 1.5rem 0 0.7rem;
-      letter-spacing: 0.1rem; }
+      margin: 1.5rem 0 0.7rem; }
