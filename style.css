@@ -33,7 +33,20 @@ h1 {
     -o-border-radius: 20px;
     text-align: center;
     padding: 2rem;
-    margin: 1rem; }
+    margin: 1rem;
+    position: relative; }
+    .poke-container .pokemon__checkbox {
+      height: 3rem;
+      width: 3rem;
+      background-color: #d4d4d4;
+      border-radius: 50%;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -ms-border-radius: 50%;
+      -o-border-radius: 50%;
+      position: absolute;
+      top: 3%;
+      right: 6%; }
     .poke-container .pokemon__img-container {
       background-color: rgba(255, 255, 255, 0.6);
       margin-top: 2rem;
@@ -47,16 +60,19 @@ h1 {
       .poke-container .pokemon__img-container img {
         max-width: 90%;
         margin-top: 2rem; }
-  .poke-container .info {
-    margin-top: 2rem; }
-    .poke-container .info__number {
-      background-color: #fff;
-      font-size: 1.2rem;
-      padding: 0.3rem 0.5rem;
-      border-radius: 1rem;
-      -webkit-border-radius: 1rem;
-      -moz-border-radius: 1rem;
-      -ms-border-radius: 1rem;
-      -o-border-radius: 1rem; }
-    .poke-container .info__pokeName {
-      margin: 1.5rem 0 0.7rem; }
+    .poke-container .pokemon__info {
+      margin-top: 2rem; }
+      .poke-container .pokemon__info--number {
+        background-color: #fff;
+        font-size: 1.2rem;
+        padding: 0.3rem 0.5rem;
+        border-radius: 1rem;
+        -webkit-border-radius: 1rem;
+        -moz-border-radius: 1rem;
+        -ms-border-radius: 1rem;
+        -o-border-radius: 1rem; }
+      .poke-container .pokemon__info--pokeName {
+        margin: 1.5rem 0 0.7rem; }
+
+.checked {
+  background-color: red; }

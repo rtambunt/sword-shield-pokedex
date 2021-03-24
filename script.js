@@ -26,6 +26,7 @@ const fetchPokemon = async () => {
 fetchPokemon();
 
 const createPokemonCard = function (entryNum, pokeInfo) {
+  // Creating pokemon Element
   const pokemonEl = document.createElement(`div`);
   pokemonEl.classList.add(`pokemon`);
 
@@ -33,14 +34,28 @@ const createPokemonCard = function (entryNum, pokeInfo) {
   const pokeSprite = pokeInfo.sprites.front_default;
 
   const pokeInnerHTML = `
+    <div class="pokemon__checkbox"></div>
     <div class="pokemon__img-container">
       <img src="${pokeSprite}"/> 
     </div> 
-    <div class="info">
-      <span class="info__number">No. ${String(entryNum).padStart(3, 0)}</span> 
-      <h2 class="info__pokeName">${pokeName}<h2> 
+    <div class="pokemon__info">
+      <span class="pokemon__info--number">No. ${String(entryNum).padStart(
+        3,
+        0
+      )}</span> 
+      <h2 class="pokemon__info--pokeName">${pokeName}<h2> 
     </div>`;
 
   pokemonEl.innerHTML = pokeInnerHTML;
+  pokemonEl.addEventListener('click', function (e) {
+    const checkbox = e.target;
+    // Guard Clause
+    if (!checkbox.classList.contains('pokemon__checkbox')) return;
+
+    // Change background color
+    if (checkbox.style.backgroundColor !== 'red')
+      checkbox.style.backgroundColor = 'red';
+    else checkbox.style.backgroundColor = 'rgb(212, 212, 212)';
+  });
   pokeContainer.appendChild(pokemonEl);
 };
