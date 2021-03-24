@@ -30,7 +30,8 @@ h1 {
     -ms-border-radius: 20px;
     -o-border-radius: 20px;
     text-align: center;
-    padding: 2rem 1rem; }
+    padding: 2rem 1rem;
+    margin: 1rem; }
     .poke-container .pokemon__img-container {
       background-color: rgba(255, 255, 255, 0.6);
       margin-top: 2rem;
@@ -41,5 +42,20 @@ h1 {
       -moz-border-radius: 50%;
       -ms-border-radius: 50%;
       -o-border-radius: 50%; }
-      .poke-container .pokemon__img-container a {
-        max-width: 90%; }
+      .poke-container .pokemon__img-container img {
+        max-width: 90%;
+        margin-top: 2rem; }
+  .poke-container .info {
+    margin-top: 2rem; }
+    .poke-container .info__number {
+      background-color: #fff;
+      font-size: 1.2rem;
+      padding: 0.3rem 0.5rem;
+      border-radius: 1rem;
+      -webkit-border-radius: 1rem;
+      -moz-border-radius: 1rem;
+      -ms-border-radius: 1rem;
+      -o-border-radius: 1rem; }
+    .poke-container .info__pokeName {
+      margin: 1.5rem 0 0.7rem;
+      letter-spacing: 0.1rem; }

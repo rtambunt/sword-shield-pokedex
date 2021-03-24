@@ -32,9 +32,14 @@ const createPokemonCard = function (entryNum, pokeInfo) {
   const pokeName = pokeInfo.name[0].toUpperCase() + pokeInfo.name.slice(1);
   const pokeSprite = pokeInfo.sprites.front_default;
 
-  const pokeInnerHTML = `<div class="pokemon__img-container">
-  <img src="${pokeSprite}">
-  </div> No. ${entryNum} ${pokeName}`;
+  const pokeInnerHTML = `
+    <div class="pokemon__img-container">
+      <img src="${pokeSprite}"/> 
+    </div> 
+    <div class="info">
+      <span class="info__number">No. ${entryNum}</span> 
+      <h2 class="info__pokeName">${pokeName}<h2> 
+    </div>`;
 
   pokemonEl.innerHTML = pokeInnerHTML;
   pokeContainer.appendChild(pokemonEl);

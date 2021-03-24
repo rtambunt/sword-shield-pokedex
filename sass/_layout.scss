@@ -14,6 +14,7 @@
     -o-border-radius: 20px;
     text-align: center;
     padding: 2rem 1rem;
+    margin: 1rem;
 
     &__img-container {
       background-color: rgba($color: white, $alpha: 0.6);
@@ -26,9 +27,30 @@
       -ms-border-radius: 50%;
       -o-border-radius: 50%;
 
-      a {
+      img {
         max-width: 90%;
+        margin-top: 2rem;
       }
+    }
+  }
+
+  .info {
+    margin-top: 2rem;
+
+    &__number {
+      background-color: #fff;
+      font-size: 1.2rem;
+      padding: 0.3rem 0.5rem;
+      border-radius: 1rem;
+      -webkit-border-radius: 1rem;
+      -moz-border-radius: 1rem;
+      -ms-border-radius: 1rem;
+      -o-border-radius: 1rem;
+    }
+
+    &__pokeName {
+      margin: 1.5rem 0 0.7rem;
+      letter-spacing: 0.1rem;
     }
   }
 }
