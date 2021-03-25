@@ -44,7 +44,7 @@ const createPokemonCard = function (entryNum, pokeInfo) {
         0
       )}</span> 
       <h2 class="pokemon__info--pokeName">${pokeName}<h2> 
-    </div>`;
+    </div>`; // FIX ME Later!!
 
   pokemonEl.innerHTML = pokeInnerHTML;
   pokemonEl.addEventListener('click', function (e) {

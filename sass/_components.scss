@@ -1,1 +1,43 @@
+.checked {
+  --inner-circle-diameter: 14px;
 
+  height: 3rem;
+  width: 3rem;
+  background: linear-gradient(
+    #fff 0%,
+    #fff 42%,
+    var(--color-red) 42%,
+    var(--color-red) 58%,
+    #fff 58%,
+    #fff 100%
+  );
+  border: 3px solid var(--color-red);
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+
+  position: absolute;
+  top: 3%;
+  right: 6%;
+
+  &::before,
+  &::after {
+    content: '';
+    display: block;
+    background: #fff;
+    width: var(--inner-circle-diameter);
+    height: var(--inner-circle-diameter);
+    border: 3px solid var(--color-red);
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+
+    position: absolute;
+    top: calc(50% - (var(--inner-circle-diameter) / 2));
+    left: calc(50% - (var(--inner-circle-diameter) / 2));
+  }
+}
